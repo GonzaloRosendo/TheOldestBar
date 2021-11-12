@@ -608,7 +608,7 @@ html {
     padding-bottom: 4rem;
   }
   .body #seccionContacto #direccionHorarios {
-    width: 40%;
+    width: 100%;
     margin-left: 0;
     text-align: center;
   }
