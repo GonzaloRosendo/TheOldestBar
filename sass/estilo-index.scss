@@ -103,7 +103,6 @@ $xlarge: 6rem;
                         color: white;
                         font-weight: normal;
                         font-size: $xlarge;
-                        letter-spacing: 0.2rem;
                     }
                 }
             }
@@ -185,6 +184,7 @@ $xlarge: 6rem;
         h2 {
             font-size: 2.5rem;
             margin: 2.5rem 1rem 1rem 1rem;
+            letter-spacing: normal;
             
         }
 

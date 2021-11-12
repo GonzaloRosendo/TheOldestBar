@@ -462,7 +462,7 @@ $xlarge: 6rem;
                 margin-bottom: 2rem;
 
                 img {
-                    height: 0.4rem;
+                    height: 0.45rem;
                 }
 
                 h2{
@@ -487,7 +487,6 @@ $xlarge: 6rem;
         }
     }
 }
-
 
 // -----------------------------------------MEDIA QUERIES: CARTA-----------------------------------------------
 @media (max-width: 1199px) {
@@ -600,7 +599,7 @@ $xlarge: 6rem;
             padding-bottom: 4rem;
 
             #direccionHorarios {   
-                width: 40%;
+                width: 100%;
                 margin-left: 0;
                 text-align: center;
                 

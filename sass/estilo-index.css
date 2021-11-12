@@ -119,7 +119,6 @@ html {
   color: white;
   font-weight: normal;
   font-size: 6rem;
-  letter-spacing: 0.2rem;
 }
 
 .body .locales a .imagen:hover {
@@ -183,6 +182,7 @@ html {
   .body h2 {
     font-size: 2.5rem;
     margin: 2.5rem 1rem 1rem 1rem;
+    letter-spacing: normal;
   }
   .body .locales {
     display: -webkit-box;
