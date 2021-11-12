@@ -1,0 +1,638 @@
+@font-face {
+    font-family: 'Texta';
+    src: url(../fonts/texta.ttf);
+}
+
+@font-face {
+    font-family: 'Black Ravens';
+    src: url(../fonts/black-ravens.ttf);
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url(../fonts/nexa-rust-script.otf);
+}
+
+html {font-size: 10px;}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Texta';
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+
+/*Variables*/
+$amarilloOldest: #ffe255;
+$negroOldest: #111111;
+$small: 1.5rem;
+$medium: 1.8rem;
+$large: 2.5rem;
+$xlarge: 6rem;
+
+
+.body {
+    background-color: $negroOldest;
+
+    // -----------------------------------------HEADER-----------------------------------------------
+    header {
+        height: 8rem;
+        width: 100%;
+        background-color: black;
+        position: sticky;
+        top: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 2;
+
+        #logoOldest {
+            margin-left: 10%;
+            
+            img {
+                height: 6rem;
+            }
+        }
+
+        ul {
+            margin:auto;
+            padding: 0;
+        
+            li {
+                display: inline-flex;
+
+                a {
+                    font-size: $small;
+                    color: white;
+                    text-decoration: none;
+                    margin: 0 0.8rem;
+                }
+
+                a:hover {
+                    color: #aa0041;
+                }
+            }
+
+            li #activo {
+                color: #aa0041;
+            }
+        }
+
+        #redesEncabezado {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10%;
+
+            a{
+                margin: 0 0.8rem;
+            }
+
+            #instagramHeader{
+                background: url(../multimedia/images/instagram.svg) no-repeat;
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            
+            #facebookHeader{
+                background: url(../multimedia/images/facebook.svg) no-repeat;
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            
+            #twitterHeader{
+                background: url(../multimedia/images/twitter.svg) no-repeat;
+                width: 1.8rem;
+                height: 1.5rem;
+            }
+        }  
+    }
+
+    // -------------------------------------SLIDE DE PORTADA----------------------------------------
+    #BienvenidoTheOldest{
+        height: 36rem;
+    }
+
+    @for $i from 1 through 3 {     /* BUCLE */
+        .car-#{$i} {
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 88vh;
+        }
+    }
+    
+    .car-1 {
+        background-image: url(../multimedia/images/bienvenido-11.png);
+    }
+    
+    .car-2 {
+        background-image: url(../multimedia/images/bienvenido-22.png);
+    }
+    
+    .car-3 {
+        background-image: url(../multimedia/images/bienvenido-33.png);
+    }
+
+    // -------------------------------------CONTENIDO COMÚN A TODAS LAS SECCIONES----------------------------------------
+    .seccion {
+        padding-top: 10rem;
+        
+        .estructuraTitulo{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 4rem;
+            
+            img {
+                height: 1rem;
+            }
+    
+            h2{
+                font-family: 'Nexa';
+                font-size: $large;
+                word-spacing: 0.3rem;
+                color: $amarilloOldest;
+                margin: 0 4rem;
+            }
+        }
+    }
+
+    // -------------------------------------SECCION NOVEDADES----------------------------------------
+        #carouselExampleControls {
+            margin: auto;
+            width: 45rem;
+        }
+
+    // ------------------------------------------CARTA---------------------------------------------------
+    #gridDeComidas {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-column-gap: 3rem;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 6rem;
+
+        .contenedor {
+            position: relative;
+
+            .comidasimg{
+                height: 26rem;
+            }
+
+            .filtroOscuro {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background:rgba(0,0,0,0.6);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                
+                p{
+                    transform: translateY(2.5rem);
+                    font-size: $medium;
+                    color: white;
+                }
+            }
+
+            .filtroOscuro:hover {
+                opacity: 1; 
+                box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.6); 
+                p{
+                    transform: translateY(0rem);
+                }                 
+            }
+        }
+
+        h3 {
+            font-size: $medium;
+            color: $amarilloOldest;
+            margin-top: 1rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    // -----------------------------------------PEDIDOS-----------------------------------------------
+    #seccionPedidos {
+        background-image: url(../multimedia/images/fondoVictoriano.jpg);
+        background-size: cover;
+        background-position: center center;
+
+        p {
+            font-family: 'Nexa';
+            font-size: $large;
+            word-spacing: 0.3rem;
+            font-size: $large;
+            color: white;
+            text-align: center;
+        }
+
+        #cajasPedidos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pedidos {
+            background-image: linear-gradient(to bottom, #72002e , rgb(210, 22, 22));
+            width: 34rem;
+            height: 20rem;
+            margin: 0rem 3rem 10rem 3rem;
+            border-radius: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                height: 5rem;
+            }
+
+            p{
+                font-family: 'Black Ravens';
+                font-size: $xlarge - 1.2rem;
+                line-height: $xlarge - 1.2rem;
+                color: $amarilloOldest;
+
+                span {
+                    font-family: 'Black Ravens';
+                    color: #2bff00;
+                }
+            }
+        }
+
+        .pedidos:hover {
+            box-shadow: 0px 0px 20px 5px rgb(0, 0, 0);
+            transform: scale(1.02);
+        }
+        
+        .apps {
+            height: 5rem;
+            line-height: 5rem;
+
+            img{
+                margin: 0 2rem;
+            }
+        }
+    }
+
+
+    // -----------------------------------------CONTACTO-----------------------------------------------
+    #seccionContacto {
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 10rem;
+
+        #direccionHorarios {
+            width: 40%;
+            margin-left: 10%;
+
+            h2{
+                color: $amarilloOldest;
+                font-size: $large + 1rem;
+                font-family: "Nexa";
+                margin-bottom: 3rem;
+            }
+
+            h3 {
+                color: $amarilloOldest;
+                font-size: $medium;
+                margin-top: 3rem;
+            }
+
+            p {
+                color: white;
+                font-size: $medium;
+            }
+
+            #redesPie {
+                display: flex;
+                flex-direction: row;
+                margin-top: 1.4rem;
+    
+                a{
+                    margin: 0 0.8rem;
+                }
+
+                #sinMargen {
+                    margin-left: 0;
+                }
+    
+                #instagramHeader{
+                    background: url(../multimedia/images/instagram.svg) no-repeat;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+                
+                #facebookHeader{
+                    background: url(../multimedia/images/facebook.svg) no-repeat;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+                
+                #twitterHeader{
+                    background: url(../multimedia/images/twitter.svg) no-repeat;
+                    width: 1.8rem;
+                    height: 1.5rem;
+                }
+            }  
+        }
+
+        iframe {
+            margin-right: 10%;
+            width: 100rem;
+            height: 45rem;
+        }
+    }
+}
+
+
+
+// -----------------------------------------MEDIA QUERIES: HEADER-----------------------------------------------
+@media (max-width: 1023px) {
+    .body{
+        header{
+            nav{
+                margin-right: 10%;
+            }
+
+            #redesEncabezado{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) { 
+    .body{
+        header{
+            flex-direction: column;
+
+            #logoOldest {
+                margin: auto;
+                
+                img {
+                    height: 4rem;
+                }
+            }
+            
+            nav{
+                margin: auto;
+            }
+
+            ul{
+                li{
+                    a{
+                        font-size: $small - 0.2rem;
+                        margin: 0 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// -----------------------------------------MEDIA QUERIES: SLIDER-----------------------------------------------
+@media (max-width: 1023px) { 
+    .body {
+        #BienvenidoTheOldest{
+            height: 30rem;
+        }
+    }
+}
+
+@media (max-width: 767px) { 
+    .body {
+        #BienvenidoTheOldest{
+            height: 18rem;
+        }
+
+        @for $i from 1 through 3 {     /* BUCLE */
+            .car-#{$i} {
+                height: 50vh;
+            }
+        }
+    }
+}
+
+// -----------------------------------------MEDIA QUERIES: CONTENIDO COMÚN A TODAS LAS SECCIONES-----------------------------------------------
+@media (max-width: 1199px) {
+    .body {
+        .seccion {
+            .estructuraTitulo{
+                img {
+                    height: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .body {
+        .seccion {
+            .estructuraTitulo{
+                h2{
+                    font-size: $large;
+                }
+
+                #tituloCarta {
+                    width: 36rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .body {
+        .seccion {
+            padding-top: 4rem;
+
+            .estructuraTitulo{
+                margin-bottom: 2rem;
+
+                img {
+                    height: 0.4rem;
+                }
+
+                h2{
+                    margin: 0 1.4rem;
+                    font-size: $small;
+                }
+
+                #tituloCarta {
+                    width: 12rem;
+                }
+            }
+        }
+    }
+}
+
+// -----------------------------------------MEDIA QUERIES: NOVEDADES-----------------------------------------------
+@media (max-width: 767px) {
+    .body {
+        #carouselExampleControls {
+            margin: auto;
+            width: 25rem;
+        }
+    }
+}
+
+
+// -----------------------------------------MEDIA QUERIES: CARTA-----------------------------------------------
+@media (max-width: 1199px) {
+    .body {
+        #gridDeComidas {
+            .contenedor {
+                .comidasimg{
+                    height: 22rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .body {
+        #gridDeComidas {
+            .contenedor {
+                .comidasimg{
+                    height: 17rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .body {
+        #gridDeComidas {
+            grid-template-columns: repeat(2, auto);
+            grid-column-gap: 1.5rem;
+            margin: 0rem;
+            .contenedor {
+                .comidasimg{
+                    height: 12rem;
+                }
+            }
+            
+            h3 {
+                font-size: $small - 0.2rem;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
+
+// -----------------------------------------MEDIA QUERIES: PEDIDOS-----------------------------------------------
+@media (max-width: 767px) {
+    .body {
+        #seccionPedidos {
+            #cajasPedidos {
+                display: flex;
+                flex-direction: column;
+            }
+        
+            .pedidos {
+                width: 28rem;
+                margin-bottom: 3rem;
+        
+                p {
+                    font-size: $xlarge - 3rem;
+                }
+            }
+        }        
+    }
+}
+
+// -----------------------------------------MEDIA QUERIES: CONTACTO-----------------------------------------------
+@media (max-width: 1199px) {
+    .body {
+        #seccionContacto {
+            iframe {
+                width: 60rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .body {
+        #seccionContacto {
+            #direccionHorarios {    
+                h2{
+                    font-size: $large;
+                }
+    
+                h3 {
+                    font-size: $small;
+                }
+    
+                p {
+                    font-size: $small;
+                }
+            }
+    
+            iframe {
+                width: 50rem;
+                height: 38rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .body {
+        #seccionContacto {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 4rem;
+
+            #direccionHorarios {   
+                width: 40%;
+                margin-left: 0;
+                text-align: center;
+                
+                h2{
+                    font-size: $small;
+                    margin-bottom: 1.5rem;  
+                }
+    
+                h3 {
+                    margin-top: 3rem;
+                }
+
+                #redesPie {
+                    justify-content: center;
+                    margin-top: 1rem;
+                    margin-bottom: 3rem;
+        
+                    a{
+                        margin: 0 0.8rem;
+                    }
+        
+                    #sinMargen {
+                        margin-left: 0.4rem;
+                    }
+                }
+            }  
+    
+            iframe {
+                margin-right: 0;
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,214 @@
+@font-face {
+    font-family: 'Texta';
+    src: url(../fonts/texta.ttf);
+}
+
+@font-face {
+    font-family: 'Black Ravens';
+    src: url(../fonts/black-ravens.ttf);
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url(../fonts/nexa-rust-script.otf);
+}
+
+
+html {font-size: 10px;}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+
+/*Variables*/
+
+$amarilloOldest: #ffe255;
+$negroOldest: #111111;
+
+$small: 1.5rem;
+$medium: 1.8rem;
+$large: 2rem;
+$xlarge: 6rem;
+
+.body {
+    background-color: $negroOldest;
+
+    // -----------------------------------------HEADER-----------------------------------------------
+    header {
+        height: 8rem;
+        width: 100%;
+        background-color: black;
+        position: sticky;
+        top: 0px;
+        display: flex;
+        align-items: center;
+        z-index: 2;
+
+        #logoOldest {
+            margin-left: 10%;
+            
+            img {
+                height: 6rem;
+            }
+        }
+    }
+
+    // -----------------------------------------SECCIÓN LOCALES-----------------------------------------------
+    h2 {
+        font-family: "Nexa";
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        margin: 5rem;
+    }
+
+    .locales {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        a {
+            text-decoration: none;
+            margin: 0 4rem;
+        
+            .imagen {
+                position: relative;
+                display: flex;
+                height: 37rem;
+                width: 50rem;
+                background-position: center;
+                background-size: cover;
+                border-radius: 4rem;
+                
+
+                .filtroOscuro {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background:rgba(0,0,0,0.4);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 4rem;
+
+                    h3 {
+                        margin: auto;
+                        font-family: 'Black Ravens';
+                        color: white;
+                        font-weight: normal;
+                        font-size: $xlarge;
+                        letter-spacing: 0.2rem;
+                    }
+                }
+            }
+
+            .imagen:hover {
+                box-shadow: 0px 0px 20px 5px rgb(12, 12, 12);
+                transform: scale(1.02);
+
+                .filtroOscuro:hover {
+                    background:rgba(0,0,0,0);
+                }
+
+                h3 {
+                    transform: translateY(2.5rem);
+                    opacity: 0;
+                }
+            }
+
+            #caballito {
+                background-image: url(../multimedia/images/Inicio-caballito.png);
+            }
+
+            #belgrano {
+                background-image: url(../multimedia/images/Inicio-belgrano.png);
+            }
+        }
+    }
+}
+
+
+
+// -----------------------------------------MEDIA QUERIES-----------------------------------------------
+
+@media (max-width: 1199px) { 
+    .body{
+        .locales {
+            a {
+                margin: 0 2rem;
+
+                .imagen {
+                    height: 30rem;
+                    width: 40rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) { 
+    .body{
+        .locales {
+            a {
+                margin: 0 1.5rem;
+
+                .imagen {
+                    height: 22rem;
+                    width: 32rem;
+                    
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) { 
+    .body{
+        header{
+            flex-direction: column;
+    
+            #logoOldest {
+                margin: auto;
+                    
+                img {
+                    height: 4rem;
+                }
+            }
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin: 2.5rem 1rem 1rem 1rem;
+            
+        }
+
+        .locales {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                .imagen {
+                    margin: 1.5rem;
+
+                    .filtroOscuro {
+                        h3 {
+                            font-size: $xlarge - 1rem;
+                        }
+                    }
+                }
+
+                #belgrano {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+}

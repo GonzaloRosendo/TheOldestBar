@@ -1,0 +1,212 @@
+@font-face {
+  font-family: 'Texta';
+  src: url(../fonts/texta.ttf);
+}
+
+@font-face {
+  font-family: 'Black Ravens';
+  src: url(../fonts/black-ravens.ttf);
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url(../fonts/nexa-rust-script.otf);
+}
+
+html {
+  font-size: 10px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+/*Variables*/
+.body {
+  background-color: #111111;
+}
+
+.body header {
+  height: 8rem;
+  width: 100%;
+  background-color: black;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
+.body header #logoOldest {
+  margin-left: 10%;
+}
+
+.body header #logoOldest img {
+  height: 6rem;
+}
+
+.body h2 {
+  font-family: "Nexa";
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: 5rem;
+}
+
+.body .locales {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.body .locales a {
+  text-decoration: none;
+  margin: 0 4rem;
+}
+
+.body .locales a .imagen {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 37rem;
+  width: 50rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 4rem;
+}
+
+.body .locales a .imagen .filtroOscuro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 4rem;
+}
+
+.body .locales a .imagen .filtroOscuro h3 {
+  margin: auto;
+  font-family: 'Black Ravens';
+  color: white;
+  font-weight: normal;
+  font-size: 6rem;
+  letter-spacing: 0.2rem;
+}
+
+.body .locales a .imagen:hover {
+  -webkit-box-shadow: 0px 0px 20px 5px #0c0c0c;
+          box-shadow: 0px 0px 20px 5px #0c0c0c;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.body .locales a .imagen:hover .filtroOscuro:hover {
+  background: rgba(0, 0, 0, 0);
+}
+
+.body .locales a .imagen:hover h3 {
+  -webkit-transform: translateY(2.5rem);
+          transform: translateY(2.5rem);
+  opacity: 0;
+}
+
+.body .locales a #caballito {
+  background-image: url(../multimedia/images/Inicio-caballito.png);
+}
+
+.body .locales a #belgrano {
+  background-image: url(../multimedia/images/Inicio-belgrano.png);
+}
+
+@media (max-width: 1199px) {
+  .body .locales a {
+    margin: 0 2rem;
+  }
+  .body .locales a .imagen {
+    height: 30rem;
+    width: 40rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .body .locales a {
+    margin: 0 1.5rem;
+  }
+  .body .locales a .imagen {
+    height: 22rem;
+    width: 32rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .body header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .body header #logoOldest {
+    margin: auto;
+  }
+  .body header #logoOldest img {
+    height: 4rem;
+  }
+  .body h2 {
+    font-size: 2.5rem;
+    margin: 2.5rem 1rem 1rem 1rem;
+  }
+  .body .locales {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .body .locales a .imagen {
+    margin: 1.5rem;
+  }
+  .body .locales a .imagen .filtroOscuro h3 {
+    font-size: 5rem;
+  }
+  .body .locales a #belgrano {
+    margin-bottom: 3rem;
+  }
+}
+/*# sourceMappingURL=estilo-index.css.map */
