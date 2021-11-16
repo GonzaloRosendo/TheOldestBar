@@ -148,18 +148,6 @@ html {
   height: 88vh;
 }
 
-.body .car-1 {
-  background-image: url(../multimedia/images/bienvenido-11.png);
-}
-
-.body .car-2 {
-  background-image: url(../multimedia/images/bienvenido-22.png);
-}
-
-.body .car-3 {
-  background-image: url(../multimedia/images/bienvenido-33.png);
-}
-
 .body .seccion {
   padding-top: 10rem;
 }
@@ -638,4 +626,4 @@ html {
     height: auto;
   }
 }
-/*# sourceMappingURL=estilo-caballito.css.map */
+/*# sourceMappingURL=estilo-paginas.css.map */
