@@ -537,6 +537,9 @@ html {
   .body #gridDeComidas .contenedor .comidasimg {
     height: 12rem;
   }
+  .body #gridDeComidas .contenedor .filtroOscuro p {
+    font-size: 1.3rem;
+  }
   .body #gridDeComidas h3 {
     font-size: 1.3rem;
     margin-bottom: 3rem;
