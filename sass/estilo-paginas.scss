@@ -151,7 +151,7 @@ $xlarge: 6rem;
     // -------------------------------------SECCION NOVEDADES----------------------------------------
         #carouselExampleControls {
             margin: auto;
-            width: 45rem;
+            width: 52rem;
         }
 
     // ------------------------------------------CARTA---------------------------------------------------
@@ -446,6 +446,10 @@ $xlarge: 6rem;
         .seccion {
             padding-top: 4rem;
 
+            .estTituloCarta {
+                margin-top: 3rem;
+            }
+
             .estructuraTitulo{
                 margin-bottom: 2rem;
 
@@ -471,7 +475,7 @@ $xlarge: 6rem;
     .body {
         #carouselExampleControls {
             margin: auto;
-            width: 25rem;
+            width: 35rem;
         }
     }
 }
@@ -525,6 +529,10 @@ $xlarge: 6rem;
 @media (max-width: 767px) {
     .body {
         #seccionPedidos {
+            margin-top: 3rem;
+            padding-top: 5rem;
+            padding-bottom: 3rem;
+
             #cajasPedidos {
                 display: flex;
                 flex-direction: column;
@@ -535,7 +543,7 @@ $xlarge: 6rem;
                 margin-bottom: 3rem;
         
                 p {
-                    font-size: $xlarge - 3rem;
+                    font-size: $xlarge - 2rem;
                 }
             }
         }        
@@ -584,7 +592,8 @@ $xlarge: 6rem;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 4rem;
+            padding-top: 6rem;
+            padding-bottom: 5rem;
 
             #direccionHorarios {   
                 width: 100%;

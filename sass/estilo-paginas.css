@@ -183,7 +183,7 @@ html {
 
 .body #carouselExampleControls {
   margin: auto;
-  width: 45rem;
+  width: 52rem;
 }
 
 .body #gridDeComidas {
@@ -490,6 +490,9 @@ html {
   .body .seccion {
     padding-top: 4rem;
   }
+  .body .seccion .estTituloCarta {
+    margin-top: 3rem;
+  }
   .body .seccion .estructuraTitulo {
     margin-bottom: 2rem;
   }
@@ -508,7 +511,7 @@ html {
 @media (max-width: 767px) {
   .body #carouselExampleControls {
     margin: auto;
-    width: 25rem;
+    width: 35rem;
   }
 }
 
@@ -541,6 +544,11 @@ html {
 }
 
 @media (max-width: 767px) {
+  .body #seccionPedidos {
+    margin-top: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
   .body #seccionPedidos #cajasPedidos {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -555,7 +563,7 @@ html {
     margin-bottom: 3rem;
   }
   .body #seccionPedidos .pedidos p {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 
@@ -593,7 +601,8 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-bottom: 4rem;
+    padding-top: 6rem;
+    padding-bottom: 5rem;
   }
   .body #seccionContacto #direccionHorarios {
     width: 100%;
