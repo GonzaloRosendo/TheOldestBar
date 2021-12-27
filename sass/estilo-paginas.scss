@@ -73,10 +73,6 @@ $xlarge: 6rem;
                     color: #aa0041;
                 }
             }
-
-            li #activo {
-                color: #aa0041;
-            }
         }
 
         #redesEncabezado {
@@ -132,19 +128,26 @@ $xlarge: 6rem;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            margin-bottom: 4rem;
+            ;
             
             img {
                 height: 1rem;
             }
     
             h2{
-                font-family: 'Nexa';
-                font-size: $large;
-                word-spacing: 0.3rem;
-                color: $amarilloOldest;
+                font-family: 'Black Ravens';
+                font-size: $xlarge;
+                color: #aa0041;
                 margin: 0 4rem;
             }
+        }
+
+        .textoIntro {
+            font-size: $large;
+            font-family: "Nexa";
+            color: white;
+            text-align: center;
+            margin-bottom: 5rem; 
         }
     }
 
@@ -212,15 +215,6 @@ $xlarge: 6rem;
         background-size: cover;
         background-position: center center;
 
-        p {
-            font-family: 'Nexa';
-            font-size: $large;
-            word-spacing: 0.3rem;
-            font-size: $large;
-            color: white;
-            text-align: center;
-        }
-
         #cajasPedidos {
             display: flex;
             justify-content: center;
@@ -284,16 +278,15 @@ $xlarge: 6rem;
             margin-left: 10%;
 
             h2{
-                color: $amarilloOldest;
-                font-size: $large + 1rem;
-                font-family: "Nexa";
-                margin-bottom: 3rem;
+                color: #aa0041;
+                font-size: $xlarge;
+                font-family: "Black Ravens";
             }
 
             h3 {
                 color: $amarilloOldest;
                 font-size: $medium;
-                margin-top: 3rem;
+                margin-top: 2.8rem;
             }
 
             p {
@@ -429,14 +422,17 @@ $xlarge: 6rem;
         .seccion {
             .estructuraTitulo{
                 h2{
-                    font-size: $large;
-                }
-
-                #tituloCarta {
-                    width: 36rem;
-                    text-align: center;
+                    font-size: $xlarge;
                 }
             }
+
+            .textoIntro {
+                font-size: $large;
+                font-family: "Nexa";
+                color: white;
+                text-align: center;
+                margin-bottom: 5rem; 
+                }
         }
     }
 }
@@ -451,21 +447,22 @@ $xlarge: 6rem;
             }
 
             .estructuraTitulo{
-                margin-bottom: 2rem;
+                margin-bottom: 0rem;
 
                 img {
                     height: 0.45rem;
                 }
 
                 h2{
-                    margin: 0 1.4rem;
-                    font-size: $small;
-                }
-
-                #tituloCarta {
-                    width: 12rem;
+                    margin: 0 1.5rem;
+                    font-size: $large + 1.5rem;
                 }
             }
+
+            .textoIntro {
+                font-size: $small + 0.2rem;
+                margin-bottom: 3.5rem; 
+                }
         }
     }
 }
@@ -572,11 +569,12 @@ $xlarge: 6rem;
         #seccionContacto {
             #direccionHorarios {    
                 h2{
-                    font-size: $large;
+                    font-size: $xlarge;
                 }
     
                 h3 {
                     font-size: $small;
+                    margin-top: 2rem;
                 }
     
                 p {
@@ -607,12 +605,11 @@ $xlarge: 6rem;
                 text-align: center;
                 
                 h2{
-                    font-size: $small;
-                    margin-bottom: 1.5rem;  
+                    font-size: $large + 1.5rem; 
                 }
     
                 h3 {
-                    margin-top: 3rem;
+                    margin-top: 2rem;
                 }
 
                 #redesPie {

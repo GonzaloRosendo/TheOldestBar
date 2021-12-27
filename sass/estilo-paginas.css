@@ -84,10 +84,6 @@ html {
   color: #aa0041;
 }
 
-.body header ul li #activo {
-  color: #aa0041;
-}
-
 .body header #redesEncabezado {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -166,7 +162,6 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 4rem;
 }
 
 .body .seccion .estructuraTitulo img {
@@ -174,11 +169,18 @@ html {
 }
 
 .body .seccion .estructuraTitulo h2 {
-  font-family: 'Nexa';
-  font-size: 2.5rem;
-  word-spacing: 0.3rem;
-  color: #ffe255;
+  font-family: 'Black Ravens';
+  font-size: 6rem;
+  color: #aa0041;
   margin: 0 4rem;
+}
+
+.body .seccion .textoIntro {
+  font-size: 2.5rem;
+  font-family: "Nexa";
+  color: white;
+  text-align: center;
+  margin-bottom: 5rem;
 }
 
 .body #carouselExampleControls {
@@ -255,15 +257,6 @@ html {
   background-image: url(../multimedia/images/fondoVictoriano.jpg);
   background-size: cover;
   background-position: center center;
-}
-
-.body #seccionPedidos p {
-  font-family: 'Nexa';
-  font-size: 2.5rem;
-  word-spacing: 0.3rem;
-  font-size: 2.5rem;
-  color: white;
-  text-align: center;
 }
 
 .body #seccionPedidos #cajasPedidos {
@@ -353,16 +346,15 @@ html {
 }
 
 .body #seccionContacto #direccionHorarios h2 {
-  color: #ffe255;
-  font-size: 3.5rem;
-  font-family: "Nexa";
-  margin-bottom: 3rem;
+  color: #aa0041;
+  font-size: 6rem;
+  font-family: "Black Ravens";
 }
 
 .body #seccionContacto #direccionHorarios h3 {
   color: #ffe255;
   font-size: 1.8rem;
-  margin-top: 3rem;
+  margin-top: 2.8rem;
 }
 
 .body #seccionContacto #direccionHorarios p {
@@ -478,11 +470,14 @@ html {
 
 @media (max-width: 1023px) {
   .body .seccion .estructuraTitulo h2 {
-    font-size: 2.5rem;
+    font-size: 6rem;
   }
-  .body .seccion .estructuraTitulo #tituloCarta {
-    width: 36rem;
+  .body .seccion .textoIntro {
+    font-size: 2.5rem;
+    font-family: "Nexa";
+    color: white;
     text-align: center;
+    margin-bottom: 5rem;
   }
 }
 
@@ -494,17 +489,18 @@ html {
     margin-top: 3rem;
   }
   .body .seccion .estructuraTitulo {
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
   }
   .body .seccion .estructuraTitulo img {
     height: 0.45rem;
   }
   .body .seccion .estructuraTitulo h2 {
-    margin: 0 1.4rem;
-    font-size: 1.5rem;
+    margin: 0 1.5rem;
+    font-size: 4rem;
   }
-  .body .seccion .estructuraTitulo #tituloCarta {
-    width: 12rem;
+  .body .seccion .textoIntro {
+    font-size: 1.7rem;
+    margin-bottom: 3.5rem;
   }
 }
 
@@ -578,10 +574,11 @@ html {
 
 @media (max-width: 1023px) {
   .body #seccionContacto #direccionHorarios h2 {
-    font-size: 2.5rem;
+    font-size: 6rem;
   }
   .body #seccionContacto #direccionHorarios h3 {
     font-size: 1.5rem;
+    margin-top: 2rem;
   }
   .body #seccionContacto #direccionHorarios p {
     font-size: 1.5rem;
@@ -613,11 +610,10 @@ html {
     text-align: center;
   }
   .body #seccionContacto #direccionHorarios h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 4rem;
   }
   .body #seccionContacto #direccionHorarios h3 {
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
   .body #seccionContacto #direccionHorarios #redesPie {
     -webkit-box-pack: center;
