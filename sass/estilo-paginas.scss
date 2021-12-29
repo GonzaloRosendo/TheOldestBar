@@ -31,7 +31,6 @@ $medium: 1.8rem;
 $large: 2.5rem;
 $xlarge: 6rem;
 
-
 .body {
     background-color: $negroOldest;
 
@@ -222,7 +221,7 @@ $xlarge: 6rem;
         }
 
         .pedidos {
-            background-image: linear-gradient(to bottom, #72002e , rgb(210, 22, 22));
+            
             width: 34rem;
             height: 20rem;
             margin: 0rem 3rem 10rem 3rem;
@@ -247,6 +246,15 @@ $xlarge: 6rem;
                     color: #2bff00;
                 }
             }
+
+            .apps {
+                height: 5rem;
+                line-height: 5rem;
+    
+                img{
+                    margin: 0 2rem;
+                }
+            }
         }
 
         .pedidos:hover {
@@ -254,13 +262,12 @@ $xlarge: 6rem;
             transform: scale(1.02);
         }
         
-        .apps {
-            height: 5rem;
-            line-height: 5rem;
+        .pedidosCaballito {
+            background-image: linear-gradient(to bottom, #5dc7da , rgb(25, 122, 160));
+        }
 
-            img{
-                margin: 0 2rem;
-            }
+        .pedidosBelgrano {
+            background-image: linear-gradient(to bottom, #72002e , rgb(210, 22, 22));
         }
     }
 

@@ -272,8 +272,6 @@ html {
 }
 
 .body #seccionPedidos .pedidos {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#72002e), to(#d21616));
-  background-image: linear-gradient(to bottom, #72002e, #d21616);
   width: 34rem;
   height: 20rem;
   margin: 0rem 3rem 10rem 3rem;
@@ -309,6 +307,15 @@ html {
   color: #2bff00;
 }
 
+.body #seccionPedidos .pedidos .apps {
+  height: 5rem;
+  line-height: 5rem;
+}
+
+.body #seccionPedidos .pedidos .apps img {
+  margin: 0 2rem;
+}
+
 .body #seccionPedidos .pedidos:hover {
   -webkit-box-shadow: 0px 0px 20px 5px black;
           box-shadow: 0px 0px 20px 5px black;
@@ -316,13 +323,14 @@ html {
           transform: scale(1.02);
 }
 
-.body #seccionPedidos .apps {
-  height: 5rem;
-  line-height: 5rem;
+.body #seccionPedidos .pedidosCaballito {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5dc7da), to(#197aa0));
+  background-image: linear-gradient(to bottom, #5dc7da, #197aa0);
 }
 
-.body #seccionPedidos .apps img {
-  margin: 0 2rem;
+.body #seccionPedidos .pedidosBelgrano {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#72002e), to(#d21616));
+  background-image: linear-gradient(to bottom, #72002e, #d21616);
 }
 
 .body #seccionContacto {
