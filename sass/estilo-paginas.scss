@@ -142,7 +142,7 @@ $xlarge: 7rem;
         }
 
         .textoIntro {
-            font-size: $large;
+            font-size: $large - 0.2rem;
             font-family: "Nexa";
             color: $amarilloOldest;
             text-align: center;
@@ -431,11 +431,6 @@ $xlarge: 7rem;
                 h2{
                     font-size: $xlarge - 1rem;
                 }
-            }
-
-            .textoIntro {
-                font-size: $large;
-                margin-bottom: 5rem; 
             }
         }
     }

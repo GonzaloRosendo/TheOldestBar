@@ -176,7 +176,7 @@ html {
 }
 
 .body .seccion .textoIntro {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-family: "Nexa";
   color: #ffe255;
   text-align: center;
@@ -479,10 +479,6 @@ html {
 @media (max-width: 1023px) {
   .body .seccion .estructuraTitulo h2 {
     font-size: 6rem;
-  }
-  .body .seccion .textoIntro {
-    font-size: 2.5rem;
-    margin-bottom: 5rem;
   }
 }
 
