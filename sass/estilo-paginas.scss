@@ -119,9 +119,27 @@ $xlarge: 7rem;
     }
 
 // -------------------------------------SECCION NOVEDADES----------------------------------------
-    #carouselExampleControls {
-        margin: auto;
-        width: 52rem;
+    #seccionNovedades {
+
+        #tituloNovedades{
+            text-align: center;
+            font-size: $xlarge;
+            height: 7rem;
+            font-family: "Black Ravens";
+        }
+
+        .textoIntro {
+            font-size: $large;
+            font-family: "Texta";
+            color: $amarilloOldest;
+            text-align: center;
+            margin-bottom: 5rem; 
+        }
+
+        #carouselExampleControls {
+            margin: auto;
+            width: 52rem;
+        }
     }
 
 // ------------------------------------------SECCION CARTA---------------------------------------------------
@@ -139,7 +157,6 @@ $xlarge: 7rem;
             h2{
                 font-family: 'Black Ravens';
                 font-size: $xlarge;
-                color: #aa0041;
                 margin: 0 4rem;
                 height: 7rem;
             }
@@ -412,11 +429,36 @@ $xlarge: 7rem;
 }
 
 // -----------------------------------------MEDIA QUERIES: SECCION NOVEDADES-----------------------------------------------
+
+
+@media (max-width: 1023px) {
+    .body {
+        #seccionNovedades {
+            .textoIntro {
+                font-size: $medium;
+                margin-bottom: 4rem;
+            }
+        }
+    }
+}
+
 @media (max-width: 767px) {
     .body {
-        #carouselExampleControls {
-            margin: auto;
-            width: 35rem;
+        #seccionNovedades {
+            #tituloNovedades {
+                font-size: 6rem;
+                height: 6rem;
+            }
+
+            .textoIntro {
+                font-size: $medium;
+                margin-bottom: 4rem;
+            }
+
+            #carouselExampleControls {
+                margin: auto;
+                width: 35rem;
+            }
         }
     }
 }
@@ -483,11 +525,11 @@ $xlarge: 7rem;
             .textoIntro {
                 font-size: $medium;
                 line-height: $medium;
-                margin: 0 20% 4rem 20%;
+                margin: 2rem 20% 4rem 20%;
                 font-family: "Texta"; 
             }
         }
-        
+
         #gridDeComidas {
             grid-template-columns: repeat(2, auto);
             grid-column-gap: 1.5rem;
