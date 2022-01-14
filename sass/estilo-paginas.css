@@ -489,7 +489,8 @@ html {
   }
   .body #seccionNovedades .textoIntro {
     font-size: 2rem;
-    margin-bottom: 4rem;
+    line-height: 2rem;
+    margin: 2rem 20% 4rem 20%;
   }
   .body #seccionNovedades #carouselExampleControls {
     margin: auto;
@@ -532,7 +533,6 @@ html {
     font-size: 2rem;
     line-height: 2rem;
     margin: 2rem 20% 4rem 20%;
-    font-family: "Texta";
   }
   .body #gridDeComidas {
     -ms-grid-columns: (auto)[2];

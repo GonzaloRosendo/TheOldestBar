@@ -452,7 +452,8 @@ $xlarge: 7rem;
 
             .textoIntro {
                 font-size: $medium;
-                margin-bottom: 4rem;
+                line-height: $medium;
+                margin: 2rem 20% 4rem 20%;
             }
 
             #carouselExampleControls {
@@ -526,7 +527,6 @@ $xlarge: 7rem;
                 font-size: $medium;
                 line-height: $medium;
                 margin: 2rem 20% 4rem 20%;
-                font-family: "Texta"; 
             }
         }
 
@@ -617,7 +617,7 @@ $xlarge: 7rem;
                 margin: 2rem 10%;
                 line-height: 5rem;
             }
-            
+
             #cajasPedidos {
                 display: flex;
                 flex-direction: column;
