@@ -86,8 +86,6 @@ $xlarge: 7rem;
                     height: 100%;
                     background:rgba(0,0,0,0.4);
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
 
                     h3 {
                         margin: auto;
@@ -126,8 +124,9 @@ $xlarge: 7rem;
 
 
 
-// -----------------------------------------MEDIA QUERIES-----------------------------------------------
 
+
+// -----------------------------------------MEDIA QUERIES: SECCION LOCALES-----------------------------------------------
 @media (max-width: 1199px) { 
     .body{
         .locales {
@@ -178,7 +177,7 @@ $xlarge: 7rem;
             font-size: 7rem;
             height: 7rem;
             line-height: 9rem;
-            margin: 1rem 1rem;
+            margin: 2rem 1rem;
             transform: rotate(0deg);
         }
 
@@ -190,7 +189,7 @@ $xlarge: 7rem;
 
             a {
                 .imagen {
-                    margin: 1rem;
+                    margin: 1.5rem 1rem;
                     height: 20rem;
                 }
 

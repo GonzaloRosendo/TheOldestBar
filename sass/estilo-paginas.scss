@@ -103,8 +103,6 @@ $xlarge: 7rem;
     #BienvenidoTheOldest{
         height: 36rem;
     }
-
-
     
     @for $i from 1 through 3 {     /* BUCLE */
         .car-#{$i} {
@@ -141,7 +139,7 @@ $xlarge: 7rem;
             h2{
                 font-family: 'Black Ravens';
                 font-size: $xlarge;
-                // color: #aa0041;
+                color: #aa0041;
                 margin: 0 4rem;
                 height: 7rem;
             }
@@ -155,7 +153,6 @@ $xlarge: 7rem;
             margin-bottom: 5rem; 
         }
     }
-
 
     #gridDeComidas {
         display: grid;
@@ -208,67 +205,60 @@ $xlarge: 7rem;
         }
     }
 
-
-
-    
-    // -----------------------------------------SECCION PEDIDOS-----------------------------------------------
+// -----------------------------------------SECCION PEDIDOS-----------------------------------------------
     #seccionPedidos {
         background-image: url(../multimedia/images/fondoVictoriano.jpg);
         background-size: cover;
         background-position: center center;
 
+        #tituloPedidos {
+            text-align: center;
+            font-size: $xlarge;
+            font-family: "Black Ravens";
+            font-weight: lighter;
+        }
+
         #cajasPedidos {
             display: flex;
             justify-content: center;
-        }
+            
+            .caja {
+                height: 35rem;
+                width: 48rem;
+                margin: 4rem 4rem 10rem 4rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
 
-        .pedidos {
-            height: 35rem;
-            width: 48rem;
-            margin: 4rem 4rem 10rem 4rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            p{
-                font-family: 'Black Ravens';
-                font-size: $xlarge - 1rem;
-                line-height: $xlarge - 2.2rem;
-                color: $amarilloOldest;
-
-                span {
+                p{
                     font-family: 'Black Ravens';
-                    color: #2bff00;
+                    font-size: $xlarge;
+                    color: $amarilloOldest;
+                    text-align: center;
+                    
+                    span {
+                        font-family: 'Black Ravens';
+                        color: #2bff00;
+                    }
+                }
+
+                .apps {
+                    margin: 0 auto;
+                    
+                    img{
+                        height: 8rem;
+                        margin: 0 4rem;
+                    }
                 }
             }
-
-            .apps {
-                height: 5rem;
-                line-height: 5rem;
     
-                img{
-                    height: 8rem;
-                    margin: 0 4rem;
-                    opacity: 100%;
-                }
+            .caja:hover {
+                box-shadow: 0px 0px 20px 5px rgb(0, 0, 0);
+                transform: scale(1.02);
             }
-        }
-
-        .pedidos:hover {
-            box-shadow: 0px 0px 20px 5px rgb(0, 0, 0);
-            transform: scale(1.02);
-        }
-        
-        .pedidosCaballito {
-            background-image: linear-gradient(to bottom, #5dc7da , rgb(25, 122, 160));
-        }
-
-        .pedidosBelgrano {
-            background-image: linear-gradient(to bottom, #72002e , rgb(210, 22, 22));
         }
     }
-
 
 // -----------------------------------------SECCION CONTACTO-----------------------------------------------
     #seccionContacto {
@@ -344,60 +334,6 @@ $xlarge: 7rem;
 
 
 
-
-
-
-// -----------------------------------------MEDIA QUERIES: CONTENIDO COMÚN A TODAS LAS SECCIONES-----------------------------------------------
-
-@media (max-width: 1023px) {
-    .body {
-        .seccion {
-            .estructuraTitulo{
-                h2{
-                    font-size: $xlarge - 1rem;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 767px) {
-    .body {
-        .seccion {
-            padding-top: 4rem;
-
-            .estTituloCarta {
-                margin-top: 3rem;
-            }
-
-            .estructuraTitulo{
-                margin-bottom: 0rem;
-
-                img {
-                    height: 0.45rem;
-                }
-
-                h2{
-                    margin: 0 1.5rem;
-                    font-size: $large + 2rem;
-                }
-            }
-
-            .textoIntro {
-                font-size: $small + 0.5rem;
-                margin: 0 17%;
-                line-height: 2.4rem;
-                margin-bottom: 3.5rem; 
-            }
-        }
-    }
-}
-
-
-
-
-
-
 // -----------------------------------------MEDIA QUERIES: HEADER-----------------------------------------------
 @media (max-width: 1023px) {
     .body{
@@ -465,6 +401,16 @@ $xlarge: 7rem;
     }
 }
 
+// -----------------------------------------MEDIA QUERIES: CONTENIDO COMÚN A TODAS LAS SECCIONES-----------------------------------------------
+
+@media (max-width: 767px) {
+    .body {
+        .seccion {
+            padding-top: 6rem;
+        }
+    }
+}
+
 // -----------------------------------------MEDIA QUERIES: SECCION NOVEDADES-----------------------------------------------
 @media (max-width: 767px) {
     .body {
@@ -474,7 +420,6 @@ $xlarge: 7rem;
         }
     }
 }
-
 
 // -----------------------------------------MEDIA QUERIES: SECCION CARTA-----------------------------------------------
 @media (max-width: 1199px) {
@@ -536,18 +481,18 @@ $xlarge: 7rem;
             }
 
             .textoIntro {
-                font-size: $small;
+                font-size: $medium;
                 line-height: $medium;
-                margin: 0 0 4rem 0;
+                margin: 0 20% 4rem 20%;
                 font-family: "Texta"; 
             }
-
-            
         }
+        
         #gridDeComidas {
             grid-template-columns: repeat(2, auto);
             grid-column-gap: 1.5rem;
             margin: 0rem;
+            margin-bottom: 4rem;
             .contenedor {
                 .comidasimg{
                     height: 12rem;
@@ -568,28 +513,94 @@ $xlarge: 7rem;
     }
 }
 
-// -----------------------------------------MEDIA QUERIES: PEDIDOS-----------------------------------------------
+// -----------------------------------------MEDIA QUERIES:SECCION PEDIDOS-----------------------------------------------
+@media (max-width: 1199px) {
+    .body {
+        #seccionPedidos {
+            #cajasPedidos {
+                .caja {
+                    height: 32rem;
+                    width: 44rem;
+                    margin: 4rem 3rem 10rem 3rem;
+
+                    p{
+                        font-size: $xlarge - 1rem;
+                    }
+
+                    .apps {
+                        img{
+                            height: 8rem;
+                            margin: 0 4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .body {
+        #seccionPedidos {
+            #cajasPedidos {
+                .caja {
+                    height: 22rem;
+                    width: 32rem;
+                    margin: 4rem 2rem 10rem 2rem;
+
+                    p{
+                        font-size: $xlarge - 2rem;
+                    }
+
+                    .apps {
+                        margin: 0 auto;
+                        
+                        img{
+                            height: 6rem;
+                            margin: 0 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 767px) {
     .body {
         #seccionPedidos {
-            margin-top: 3rem;
-            padding-top: 5rem;
-            padding-bottom: 3rem;
-
+            padding-bottom: 6rem;
+            #tituloPedidos{
+                font-size: 6rem; 
+                margin: 2rem 10%;
+                line-height: 5rem;
+            }
             #cajasPedidos {
                 display: flex;
                 flex-direction: column;
-            }
-        
-            .pedidos {
-                width: 28rem;
-                margin-bottom: 3rem;
-        
-                p {
-                    font-size: $xlarge - 2.6rem;
+                justify-content: center;
+                align-items: center;
+
+                .caja {
+                    height: 22rem;
+                    width: 32rem;
+                    margin: 1.5rem 1rem;
+
+                    p{
+                        font-size: $xlarge - 2rem;
+                    }
+
+                    .apps {
+                        margin: 0 auto;
+                        
+                        img{
+                            height: 6rem;
+                            margin: 0 2rem;
+                        }
+                    }
                 }
             }
-        }        
+        }
     }
 }
 
@@ -614,7 +625,7 @@ $xlarge: 7rem;
     
                 h3 {
                     font-size: $small;
-                    margin-top: 1.8rem;
+                    margin-top: 2rem;
                 }
     
                 p {
