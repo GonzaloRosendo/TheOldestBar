@@ -8,11 +8,6 @@
   src: url(../fonts/black-ravens.ttf);
 }
 
-@font-face {
-  font-family: 'Nexa';
-  src: url(../fonts/nexa-rust-script.otf);
-}
-
 html {
   font-size: 10px;
 }
@@ -148,7 +143,12 @@ html {
   padding-top: 10rem;
 }
 
-.body .seccion .estructuraTitulo {
+.body #carouselExampleControls {
+  margin: auto;
+  width: 52rem;
+}
+
+.body #seccionCarta .estructuraTitulo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,28 +164,23 @@ html {
           align-items: center;
 }
 
-.body .seccion .estructuraTitulo img {
+.body #seccionCarta .estructuraTitulo img {
   height: 1.2rem;
 }
 
-.body .seccion .estructuraTitulo h2 {
+.body #seccionCarta .estructuraTitulo h2 {
   font-family: 'Black Ravens';
   font-size: 7rem;
-  color: #aa0041;
   margin: 0 4rem;
+  height: 7rem;
 }
 
-.body .seccion .textoIntro {
-  font-size: 2.3rem;
-  font-family: "Nexa";
+.body #seccionCarta .textoIntro {
+  font-size: 2.5rem;
+  font-family: "Texta";
   color: #ffe255;
   text-align: center;
   margin-bottom: 5rem;
-}
-
-.body #carouselExampleControls {
-  margin: auto;
-  width: 52rem;
 }
 
 .body #gridDeComidas {
@@ -231,7 +226,7 @@ html {
 .body #gridDeComidas .contenedor .filtroOscuro p {
   -webkit-transform: translateY(2.5rem);
           transform: translateY(2.5rem);
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: white;
 }
 
@@ -247,9 +242,9 @@ html {
 }
 
 .body #gridDeComidas h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #ffe255;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   margin-bottom: 4rem;
 }
 
@@ -266,16 +261,12 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .body #seccionPedidos .pedidos {
-  width: 34rem;
-  height: 20rem;
-  margin: 0rem 3rem 10rem 3rem;
-  border-radius: 4rem;
+  height: 35rem;
+  width: 48rem;
+  margin: 4rem 4rem 10rem 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -291,13 +282,9 @@ html {
           align-items: center;
 }
 
-.body #seccionPedidos .pedidos img {
-  height: 5rem;
-}
-
 .body #seccionPedidos .pedidos p {
   font-family: 'Black Ravens';
-  font-size: 4.8rem;
+  font-size: 6rem;
   line-height: 4.8rem;
   color: #ffe255;
 }
@@ -313,7 +300,9 @@ html {
 }
 
 .body #seccionPedidos .pedidos .apps img {
-  margin: 0 2rem;
+  height: 8rem;
+  margin: 0 4rem;
+  opacity: 100%;
 }
 
 .body #seccionPedidos .pedidos:hover {
@@ -361,13 +350,13 @@ html {
 
 .body #seccionContacto #direccionHorarios h3 {
   color: #ffe255;
-  font-size: 1.8rem;
-  margin-top: 2.5rem;
+  font-size: 2rem;
+  margin-top: 2rem;
 }
 
 .body #seccionContacto #direccionHorarios p {
   color: white;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .body #seccionContacto #direccionHorarios #redesPie {
@@ -378,7 +367,7 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-top: 1.4rem;
+  margin-top: 1.2rem;
 }
 
 .body #seccionContacto #direccionHorarios #redesPie a {
@@ -414,6 +403,37 @@ html {
 }
 
 @media (max-width: 1023px) {
+  .body .seccion .estructuraTitulo h2 {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .body .seccion {
+    padding-top: 4rem;
+  }
+  .body .seccion .estTituloCarta {
+    margin-top: 3rem;
+  }
+  .body .seccion .estructuraTitulo {
+    margin-bottom: 0rem;
+  }
+  .body .seccion .estructuraTitulo img {
+    height: 0.45rem;
+  }
+  .body .seccion .estructuraTitulo h2 {
+    margin: 0 1.5rem;
+    font-size: 4.5rem;
+  }
+  .body .seccion .textoIntro {
+    font-size: 2rem;
+    margin: 0 17%;
+    line-height: 2.4rem;
+    margin-bottom: 3.5rem;
+  }
+}
+
+@media (max-width: 1023px) {
   .body header nav {
     margin-right: 10%;
   }
@@ -446,7 +466,7 @@ html {
 
 @media (max-width: 1023px) {
   .body #BienvenidoTheOldest {
-    height: 30rem;
+    height: 34rem;
   }
 }
 
@@ -457,7 +477,7 @@ html {
     /* BUCLE */
   }
   .body #BienvenidoTheOldest {
-    height: 18rem;
+    height: 20rem;
   }
   .body .car-1 {
     height: 50vh;
@@ -467,43 +487,6 @@ html {
   }
   .body .car-3 {
     height: 50vh;
-  }
-}
-
-@media (max-width: 1199px) {
-  .body .seccion .estructuraTitulo img {
-    height: 1rem;
-  }
-}
-
-@media (max-width: 1023px) {
-  .body .seccion .estructuraTitulo h2 {
-    font-size: 6rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .body .seccion {
-    padding-top: 4rem;
-  }
-  .body .seccion .estTituloCarta {
-    margin-top: 3rem;
-  }
-  .body .seccion .estructuraTitulo {
-    margin-bottom: 0rem;
-  }
-  .body .seccion .estructuraTitulo img {
-    height: 0.45rem;
-  }
-  .body .seccion .estructuraTitulo h2 {
-    margin: 0 1.5rem;
-    font-size: 4.5rem;
-  }
-  .body .seccion .textoIntro {
-    font-size: 2rem;
-    margin: 0 17%;
-    line-height: 2.4rem;
-    margin-bottom: 3.5rem;
   }
 }
 
@@ -521,12 +504,36 @@ html {
 }
 
 @media (max-width: 1023px) {
+  .body #seccionCarta .textoIntro {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+  }
   .body #gridDeComidas .contenedor .comidasimg {
     height: 17rem;
+  }
+  .body #gridDeComidas .contenedor .filtroOscuro p {
+    font-size: 1.5rem;
+  }
+  .body #gridDeComidas h3 {
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 767px) {
+  .body #seccionCarta .estructuraTitulo img {
+    height: 0.5rem;
+  }
+  .body #seccionCarta .estructuraTitulo h2 {
+    font-size: 6rem;
+    height: 6rem;
+    margin: 0 2rem;
+  }
+  .body #seccionCarta .textoIntro {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 0 0 4rem 0;
+    font-family: "Texta";
+  }
   .body #gridDeComidas {
     -ms-grid-columns: (auto)[2];
         grid-template-columns: repeat(2, auto);
@@ -537,10 +544,10 @@ html {
     height: 12rem;
   }
   .body #gridDeComidas .contenedor .filtroOscuro p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   .body #gridDeComidas h3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-bottom: 3rem;
   }
 }
@@ -577,7 +584,7 @@ html {
 
 @media (max-width: 1023px) {
   .body #seccionContacto #direccionHorarios h2 {
-    font-size: 6rem;
+    font-size: 7rem;
   }
   .body #seccionContacto #direccionHorarios h3 {
     font-size: 1.5rem;
@@ -605,7 +612,7 @@ html {
         -ms-flex-align: center;
             align-items: center;
     padding-top: 6rem;
-    padding-bottom: 5rem;
+    padding-bottom: 4rem;
   }
   .body #seccionContacto #direccionHorarios {
     width: 100%;
@@ -613,10 +620,7 @@ html {
     text-align: center;
   }
   .body #seccionContacto #direccionHorarios h2 {
-    font-size: 4rem;
-  }
-  .body #seccionContacto #direccionHorarios h3 {
-    margin-top: 2rem;
+    font-size: 6rem;
   }
   .body #seccionContacto #direccionHorarios #redesPie {
     -webkit-box-pack: center;

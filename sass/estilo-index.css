@@ -8,11 +8,6 @@
   src: url(../fonts/black-ravens.ttf);
 }
 
-@font-face {
-  font-family: 'Nexa';
-  src: url(../fonts/nexa-rust-script.otf);
-}
-
 html {
   font-size: 10px;
 }
@@ -48,7 +43,7 @@ html {
 }
 
 .body header #logoOldest {
-  margin-left: 10%;
+  margin: auto;
 }
 
 .body header #logoOldest img {
@@ -56,12 +51,15 @@ html {
 }
 
 .body h2 {
-  font-family: "Nexa";
-  font-size: 3.5rem;
-  font-weight: bold;
+  font-family: "Black Ravens";
+  font-size: 9rem;
+  font-weight: lighter;
   color: #ffe255;
   text-align: center;
-  margin: 5rem;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+  width: auto;
+  margin: 2rem;
 }
 
 .body .locales {
@@ -87,11 +85,10 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 37rem;
-  width: 50rem;
+  height: 35rem;
+  width: 48rem;
   background-position: center;
   background-size: cover;
-  border-radius: 4rem;
 }
 
 .body .locales a .imagen .filtroOscuro {
@@ -110,7 +107,6 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 4rem;
 }
 
 .body .locales a .imagen .filtroOscuro h3 {
@@ -118,7 +114,7 @@ html {
   font-family: 'Black Ravens';
   color: white;
   font-weight: normal;
-  font-size: 6rem;
+  font-size: 7rem;
 }
 
 .body .locales a .imagen:hover {
@@ -148,21 +144,27 @@ html {
 
 @media (max-width: 1199px) {
   .body .locales a {
-    margin: 0 2rem;
+    margin: 0 3rem;
   }
   .body .locales a .imagen {
-    height: 30rem;
-    width: 40rem;
+    height: 32rem;
+    width: 44rem;
   }
 }
 
 @media (max-width: 1023px) {
+  .body h2 {
+    font-size: 8rem;
+  }
   .body .locales a {
-    margin: 0 1.5rem;
+    margin: 0 2rem;
   }
   .body .locales a .imagen {
     height: 22rem;
     width: 32rem;
+  }
+  .body .locales a .imagen .filtroOscuro h3 {
+    font-size: 6rem;
   }
 }
 
@@ -173,16 +175,13 @@ html {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .body header #logoOldest {
-    margin: auto;
-  }
-  .body header #logoOldest img {
-    height: 4rem;
-  }
   .body h2 {
-    font-size: 2.5rem;
-    margin: 2.5rem 1rem 1rem 1rem;
-    letter-spacing: normal;
+    font-size: 7rem;
+    height: 7rem;
+    line-height: 9rem;
+    margin: 1rem 1rem;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   .body .locales {
     display: -webkit-box;
@@ -200,10 +199,8 @@ html {
             align-items: center;
   }
   .body .locales a .imagen {
-    margin: 1.5rem;
-  }
-  .body .locales a .imagen .filtroOscuro h3 {
-    font-size: 5rem;
+    margin: 1rem;
+    height: 20rem;
   }
   .body .locales a #belgrano {
     margin-bottom: 3rem;

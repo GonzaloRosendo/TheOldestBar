@@ -8,11 +8,6 @@
     src: url(../fonts/black-ravens.ttf);
 }
 
-@font-face {
-    font-family: 'Nexa';
-    src: url(../fonts/nexa-rust-script.otf);
-}
-
 html {font-size: 10px;}
 
 * {
@@ -27,14 +22,14 @@ html {font-size: 10px;}
 $amarilloOldest: #ffe255;
 $negroOldest: #111111;
 $small: 1.5rem;
-$medium: 1.8rem;
+$medium: 2rem;
 $large: 2.5rem;
 $xlarge: 7rem;
 
 .body {
     background-color: $negroOldest;
 
-    // -----------------------------------------HEADER-----------------------------------------------
+// -----------------------------------------HEADER-----------------------------------------------
     header {
         height: 8rem;
         width: 100%;
@@ -104,11 +99,13 @@ $xlarge: 7rem;
         }  
     }
 
-    // -------------------------------------SLIDE DE PORTADA----------------------------------------
+// -------------------------------------SLIDE DE PORTADA----------------------------------------
     #BienvenidoTheOldest{
         height: 36rem;
     }
 
+
+    
     @for $i from 1 through 3 {     /* BUCLE */
         .car-#{$i} {
             background-position: center;
@@ -118,16 +115,24 @@ $xlarge: 7rem;
         }
     }
 
-    // -------------------------------------CONTENIDO COMÚN A TODAS LAS SECCIONES----------------------------------------
+// -------------------------------------CONTENIDO COMÚN A TODAS LAS SECCIONES----------------------------------------
     .seccion {
         padding-top: 10rem;
-        
+    }
+
+// -------------------------------------SECCION NOVEDADES----------------------------------------
+    #carouselExampleControls {
+        margin: auto;
+        width: 52rem;
+    }
+
+// ------------------------------------------SECCION CARTA---------------------------------------------------
+    #seccionCarta {
         .estructuraTitulo{
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            ;
             
             img {
                 height: 1.2rem;
@@ -136,27 +141,22 @@ $xlarge: 7rem;
             h2{
                 font-family: 'Black Ravens';
                 font-size: $xlarge;
-                color: #aa0041;
+                // color: #aa0041;
                 margin: 0 4rem;
+                height: 7rem;
             }
         }
 
         .textoIntro {
-            font-size: $large - 0.2rem;
-            font-family: "Nexa";
+            font-size: $large;
+            font-family: "Texta";
             color: $amarilloOldest;
             text-align: center;
             margin-bottom: 5rem; 
         }
     }
 
-    // -------------------------------------SECCION NOVEDADES----------------------------------------
-        #carouselExampleControls {
-            margin: auto;
-            width: 52rem;
-        }
 
-    // ------------------------------------------CARTA---------------------------------------------------
     #gridDeComidas {
         display: grid;
         grid-template-columns: repeat(3, auto);
@@ -203,12 +203,15 @@ $xlarge: 7rem;
         h3 {
             font-size: $medium;
             color: $amarilloOldest;
-            margin-top: 1rem;
+            margin-top: 0.8rem;
             margin-bottom: 4rem;
         }
     }
 
-    // -----------------------------------------PEDIDOS-----------------------------------------------
+
+
+    
+    // -----------------------------------------SECCION PEDIDOS-----------------------------------------------
     #seccionPedidos {
         background-image: url(../multimedia/images/fondoVictoriano.jpg);
         background-size: cover;
@@ -217,27 +220,20 @@ $xlarge: 7rem;
         #cajasPedidos {
             display: flex;
             justify-content: center;
-            align-items: center;
         }
 
         .pedidos {
-            
-            width: 34rem;
-            height: 20rem;
-            margin: 0rem 3rem 10rem 3rem;
-            border-radius: 4rem;
+            height: 35rem;
+            width: 48rem;
+            margin: 4rem 4rem 10rem 4rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
 
-            img{
-                height: 5rem;
-            }
-
             p{
                 font-family: 'Black Ravens';
-                font-size: $xlarge - 2.2rem;
+                font-size: $xlarge - 1rem;
                 line-height: $xlarge - 2.2rem;
                 color: $amarilloOldest;
 
@@ -252,7 +248,9 @@ $xlarge: 7rem;
                 line-height: 5rem;
     
                 img{
-                    margin: 0 2rem;
+                    height: 8rem;
+                    margin: 0 4rem;
+                    opacity: 100%;
                 }
             }
         }
@@ -272,7 +270,7 @@ $xlarge: 7rem;
     }
 
 
-    // -----------------------------------------CONTACTO-----------------------------------------------
+// -----------------------------------------SECCION CONTACTO-----------------------------------------------
     #seccionContacto {
         background-color: black;
         display: flex;
@@ -293,7 +291,7 @@ $xlarge: 7rem;
             h3 {
                 color: $amarilloOldest;
                 font-size: $medium;
-                margin-top: 2.5rem;
+                margin-top: 2rem;
             }
 
             p {
@@ -304,7 +302,7 @@ $xlarge: 7rem;
             #redesPie {
                 display: flex;
                 flex-direction: row;
-                margin-top: 1.4rem;
+                margin-top: 1.2rem;
     
                 a{
                     margin: 0 0.8rem;
@@ -341,6 +339,62 @@ $xlarge: 7rem;
         }
     }
 }
+
+
+
+
+
+
+
+
+// -----------------------------------------MEDIA QUERIES: CONTENIDO COMÚN A TODAS LAS SECCIONES-----------------------------------------------
+
+@media (max-width: 1023px) {
+    .body {
+        .seccion {
+            .estructuraTitulo{
+                h2{
+                    font-size: $xlarge - 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .body {
+        .seccion {
+            padding-top: 4rem;
+
+            .estTituloCarta {
+                margin-top: 3rem;
+            }
+
+            .estructuraTitulo{
+                margin-bottom: 0rem;
+
+                img {
+                    height: 0.45rem;
+                }
+
+                h2{
+                    margin: 0 1.5rem;
+                    font-size: $large + 2rem;
+                }
+            }
+
+            .textoIntro {
+                font-size: $small + 0.5rem;
+                margin: 0 17%;
+                line-height: 2.4rem;
+                margin-bottom: 3.5rem; 
+            }
+        }
+    }
+}
+
+
+
 
 
 
@@ -388,11 +442,11 @@ $xlarge: 7rem;
     }
 }
 
-// -----------------------------------------MEDIA QUERIES: SLIDER-----------------------------------------------
+// -----------------------------------------MEDIA QUERIES: SLIDE DE PORTADA-----------------------------------------------
 @media (max-width: 1023px) { 
     .body {
         #BienvenidoTheOldest{
-            height: 30rem;
+            height: 34rem;
         }
     }
 }
@@ -400,7 +454,7 @@ $xlarge: 7rem;
 @media (max-width: 767px) { 
     .body {
         #BienvenidoTheOldest{
-            height: 18rem;
+            height: 20rem;
         }
 
         @for $i from 1 through 3 {     /* BUCLE */
@@ -411,65 +465,7 @@ $xlarge: 7rem;
     }
 }
 
-// -----------------------------------------MEDIA QUERIES: CONTENIDO COMÚN A TODAS LAS SECCIONES-----------------------------------------------
-@media (max-width: 1199px) {
-    .body {
-        .seccion {
-            .estructuraTitulo{
-                img {
-                    height: 1rem;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 1023px) {
-    .body {
-        .seccion {
-            .estructuraTitulo{
-                h2{
-                    font-size: $xlarge - 1rem;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 767px) {
-    .body {
-        .seccion {
-            padding-top: 4rem;
-
-            .estTituloCarta {
-                margin-top: 3rem;
-            }
-
-            .estructuraTitulo{
-                margin-bottom: 0rem;
-
-                img {
-                    height: 0.45rem;
-                }
-
-                h2{
-                    margin: 0 1.5rem;
-                    font-size: $large + 2rem;
-                }
-            }
-
-            .textoIntro {
-                font-size: $small + 0.5rem;
-                margin: 0 17%;
-                line-height: 2.4rem;
-                margin-bottom: 3.5rem; 
-                
-                }
-        }
-    }
-}
-
-// -----------------------------------------MEDIA QUERIES: NOVEDADES-----------------------------------------------
+// -----------------------------------------MEDIA QUERIES: SECCION NOVEDADES-----------------------------------------------
 @media (max-width: 767px) {
     .body {
         #carouselExampleControls {
@@ -479,9 +475,11 @@ $xlarge: 7rem;
     }
 }
 
-// -----------------------------------------MEDIA QUERIES: CARTA-----------------------------------------------
+
+// -----------------------------------------MEDIA QUERIES: SECCION CARTA-----------------------------------------------
 @media (max-width: 1199px) {
     .body {
+
         #gridDeComidas {
             .contenedor {
                 .comidasimg{
@@ -494,11 +492,29 @@ $xlarge: 7rem;
 
 @media (max-width: 1023px) {
     .body {
+
+        #seccionCarta {
+            .textoIntro {
+                font-size: $medium;
+                margin-bottom: 4rem;
+            }
+        }
+    
         #gridDeComidas {
             .contenedor {
                 .comidasimg{
                     height: 17rem;
                 }
+
+                .filtroOscuro {
+                    p{
+                        font-size: $small;
+                    }
+                }
+            }
+            
+            h3 {
+                font-size: $small;
             }
         }
     }
@@ -506,6 +522,28 @@ $xlarge: 7rem;
 
 @media (max-width: 767px) {
     .body {
+        #seccionCarta {
+            .estructuraTitulo{
+                img {
+                    height: 0.5rem;
+                }
+
+                h2 {
+                    font-size: 6rem;
+                    height: 6rem;
+                    margin: 0 2rem;
+                }
+            }
+
+            .textoIntro {
+                font-size: $small;
+                line-height: $medium;
+                margin: 0 0 4rem 0;
+                font-family: "Texta"; 
+            }
+
+            
+        }
         #gridDeComidas {
             grid-template-columns: repeat(2, auto);
             grid-column-gap: 1.5rem;
@@ -517,13 +555,13 @@ $xlarge: 7rem;
 
                 .filtroOscuro{
                     p{
-                        font-size: $small - 0.2rem;
+                        font-size: $small;
                     }
                 }
             }
             
             h3 {
-                font-size: $small - 0.2rem;
+                font-size: $small;
                 margin-bottom: 3rem;
             }
         }
@@ -555,7 +593,7 @@ $xlarge: 7rem;
     }
 }
 
-// -----------------------------------------MEDIA QUERIES: CONTACTO-----------------------------------------------
+// -----------------------------------------MEDIA QUERIES: SECCION CONTACTO-----------------------------------------------
 @media (max-width: 1199px) {
     .body {
         #seccionContacto {
@@ -571,7 +609,7 @@ $xlarge: 7rem;
         #seccionContacto {
             #direccionHorarios {    
                 h2{
-                    font-size: $xlarge - 1rem;
+                    font-size: $xlarge;
                 }
     
                 h3 {
@@ -599,7 +637,7 @@ $xlarge: 7rem;
             justify-content: space-between;
             align-items: center;
             padding-top: 6rem;
-            padding-bottom: 5rem;
+            padding-bottom: 4rem;
 
             #direccionHorarios {   
                 width: 100%;
@@ -607,11 +645,7 @@ $xlarge: 7rem;
                 text-align: center;
                 
                 h2{
-                    font-size: $large + 1.5rem; 
-                }
-    
-                h3 {
-                    margin-top: 2rem;
+                    font-size: 6rem; 
                 }
 
                 #redesPie {
