@@ -121,7 +121,7 @@ $xlarge: 7rem;
 // -------------------------------------SECCION NOVEDADES----------------------------------------
     #seccionNovedades {
 
-        #tituloNovedades{
+        h2{
             text-align: center;
             font-size: $xlarge;
             height: 7rem;
@@ -228,7 +228,7 @@ $xlarge: 7rem;
         background-size: cover;
         background-position: center center;
 
-        #tituloPedidos {
+        h2  {
             text-align: center;
             font-size: $xlarge;
             font-family: "Black Ravens";
@@ -445,7 +445,7 @@ $xlarge: 7rem;
 @media (max-width: 767px) {
     .body {
         #seccionNovedades {
-            #tituloNovedades {
+            h2 {
                 font-size: 6rem;
                 height: 6rem;
             }
@@ -612,11 +612,12 @@ $xlarge: 7rem;
     .body {
         #seccionPedidos {
             padding-bottom: 6rem;
-            #tituloPedidos{
+            h2 {
                 font-size: 6rem; 
                 margin: 2rem 10%;
                 line-height: 5rem;
             }
+            
             #cajasPedidos {
                 display: flex;
                 flex-direction: column;
